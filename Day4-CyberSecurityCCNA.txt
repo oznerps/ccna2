@@ -121,15 +121,15 @@ ping www.dlsu.edu.ph 172.67.14.0   104.22.36.0
 ping www.ccp.edu.ph 50.6.160.0     
 ping www.feu.edu.ph 184.168.125.0  
 ping  www.ue.edu.ph 155.137.92.0  
-ping  www.yourschool.edu.ph = _________
+ping  www.ieti.edu.ph = 50.87.184.118
 config t
 NO ip access-list standard NOISKUL
 ip access-list standard NOISKUL
-DENY   __.__.__.__   0.0.255.255
-DENY   __.__.__.__   0.0.255.255
-DENY   __.__.__.__   0.0.255.255
-DENY   __.__.__.__   0.0.255.255
-DENY   __.__.__.__   0.0.255.255
+DENY   172.0.0.0   0.0.255.255
+DENY   50.6.0.0    0.0.255.255
+DENY   184.168.0.0    0.0.255.255
+DENY   155.137.0.0    0.0.255.255
+DENY   50.87.0.0   0.0.255.255
 Permit Any
 Int Gi 1
  ip access-group NOISKUL in
@@ -1084,6 +1084,7 @@ https:///restconf/data/Cisco-IOS-XE-native:native/interface/Loopback
 
 HomeWork for the Hardest Day in CCNA: 
 CSr, linuxdocker, pythondocker, Postman: RestApi.
+
 
 
 
