@@ -375,7 +375,7 @@ int fa 0/7
  no shut
 end
 
-TASK11: Multiple instance STP: 802.1s
+TASK11: Multiple instance STP: 802.1s (superman)
 Make FORCEs all CPU/Instances work to protect VLANs, cpu0 = is working 
 step1: sync all Vlans with VTP:vlanTrunkingProtocol:
 TAAS/BABA: d1/d2:
@@ -494,11 +494,13 @@ config t
 hostname PLDT-ITO
 Track 1 Int gi 0/1 line-protocol
 Int vlan 1
-standby 1 ip 10.__.1.6
+standby 1 ip 10.32.1.6
 standby 1 preempt
 standby 1 Priority 150
 standby 1 Track 1 decrement 60
+end 
 
+show standby
 @D1 para realworld:
 config t
 Track 1 Int e1/0 line-protocol
@@ -728,6 +730,7 @@ how to get certified:
 2. Lab: NAT and DHCP:
 
 3. ask sa CHAT: "latest reivewer"
+
 
 
 
